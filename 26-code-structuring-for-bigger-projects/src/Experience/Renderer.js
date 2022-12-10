@@ -1,5 +1,5 @@
 import * as THREE from "three"
-import Experience from "."
+import Experience from "./Experience"
 
 export default class Renderer {
 
@@ -47,4 +47,7 @@ export default class Renderer {
     this.#instance.render(this.#scene, this.#camera.instance)
   }
 
+  get instance() {
+    return this.#instance
+  }
 }

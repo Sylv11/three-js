@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import Experience from ".";
+import Experience from "./Experience";
 
 export default class Camera {
   #experience
@@ -44,5 +44,9 @@ export default class Camera {
 
   update = () => {
     this.#orbitControls.update()
+  }
+
+  get orbitControls() {
+    return this.#orbitControls
   }
 }
